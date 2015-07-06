@@ -21,11 +21,10 @@ handleRowPress : function(e){
 		var path1 = name.oBindingContexts.data1.sPath;
 		var item = sap.ui.getCore().getModel('data1').getProperty(path1);
 		console.log(item);
-		//var myModel = new sap.ui.model.odata.v2.ODataModel(item);
-		//sap.ui.getCore().setModel(myModel, 'item');
+		var myModel = new sap.ui.model.json.JSONModel(item);
+		sap.ui.getCore().setModel(myModel, 'selected');
+		app.addDetailPage(Prod_page);
 		app.toDetail('Products', 'slide');
-
-		//app.to("Products");
 		
 	},
 aButtonClicked: function(){

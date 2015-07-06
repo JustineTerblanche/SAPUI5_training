@@ -25,10 +25,16 @@ sap.ui.jsview("sapui5.ProductList", {
 			title: "{data2>ProductName}",
 			description:"{data2>CategoryID}"
 		});
-		list.bindAggregation("items", {
-			path: "data2>/Products", 
-			template: otemplate});
+		var oFilters = [
+				          new sap.ui.model.Filter(
+				        		  "CategoryID", "EQ", "2"
+				        )];
 
+		list.bindAggregation("items", {
+			path: "data2>/Products",
+			filters: oFilters,
+			template: otemplate});
+		var tex = new sap.m.Text({text: "{selected>/CategoryID}"});
 
 		var page1 = new sap.m.Page({
 			title: "Products",
@@ -39,7 +45,7 @@ sap.ui.jsview("sapui5.ProductList", {
 			},
 			
 			content: [
-			      //new sap.m.Label({text: "{item>/CategoryID}"}),
+			    tex,
 			      list 
 			      
 			]

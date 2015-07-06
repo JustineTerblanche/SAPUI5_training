@@ -31,11 +31,12 @@
 			});
 		//app.addPage(Categ_page).addPage(Welcome_page);
 		app.addMasterPage(Categ_page);
-		app.addDetailPage(Welcome_page).addDetailPage(Prod_page);
+		app.addDetailPage(Welcome_page);
 		app.setInitialMaster("Categories");
 		app.setInitialDetail("Welcome");
 		app.setDefaultTransitionNameDetail("slide");
 		app.setMode("HideMode");
+		//app.addDetailPage(Prod_page);
 
 		app.placeAt("content");	
 
