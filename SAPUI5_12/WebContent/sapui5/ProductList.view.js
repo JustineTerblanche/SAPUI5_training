@@ -22,8 +22,8 @@ sap.ui.jsview("sapui5.ProductList", {
 
 		var otemplate = new sap.m.StandardListItem({
 			id: "Plist",
-			title: "{data2>ProductName}",
-			description:"{data2>CategoryID}"
+			title: "{data1>ProductName}",
+			description:"{data1>CategoryID}"
 		});
 		var oFilters = [
 				          new sap.ui.model.Filter(
@@ -31,7 +31,7 @@ sap.ui.jsview("sapui5.ProductList", {
 				        )];
 
 		list.bindAggregation("items", {
-			path: "data2>/Products",
+			path: "data1>/Products",
 			filters: oFilters,
 			template: otemplate});
 		var tex = new sap.m.Text({text: "{selected>/CategoryID}"});

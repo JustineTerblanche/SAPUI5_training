@@ -7,14 +7,14 @@ sap.ui.controller("sapui5.ProductList", {
 */
 
 		onInit: function() {
-			var oModel = new sap.ui.model.odata.v2.ODataModel(
+			/*var oModel = new sap.ui.model.odata.v2.ODataModel(
 					"proxy/http/services.odata.org/V2/Northwind/Northwind.svc/",
 					{
 						json: true
 					}
 				);
 			sap.ui.getCore().setModel(oModel, 'data2');
-
+*/
 		},
 
 
