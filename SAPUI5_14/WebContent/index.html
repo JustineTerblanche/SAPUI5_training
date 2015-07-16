@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+		jQuery.sap.require("sap.ui.core.util.MockServer");
+		sap.ui.localResources("sapui5");
+		var app = new sap.m.SplitApp("appId",{initialPage: "Categories"});
+		var Categ_page = sap.ui.view({
+			id:"Categories", 
+			viewName:"sapui5.main", 
+			type:sap.ui.core.mvc.ViewType.JS
+			});
+		var Prod_page = sap.ui.view({
+			id:"Products", 
+			viewName:"sapui5.ProductList", 
+			type:sap.ui.core.mvc.ViewType.JS
+			});
+		var Welcome_page = sap.ui.view({
+			id:"Welcome", 
+			viewName:"sapui5.welcome", 
+			type:sap.ui.core.mvc.ViewType.JS
+			});
+		//app.addPage(Categ_page).addPage(Welcome_page);
+		app.addMasterPage(Categ_page);
+		app.addDetailPage(Welcome_page);
+		app.setInitialMaster("Categories");
+		app.setInitialDetail("Welcome");
+		app.setDefaultTransitionNameDetail("slide");
+		app.setMode("HideMode");
+		//app.addDetailPage(Prod_page);
+
+		app.placeAt("content");	
+
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
