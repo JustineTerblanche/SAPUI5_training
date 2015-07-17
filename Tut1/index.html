@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset='UTF-8'>
+			<title>Customer Manager</title>
+			<script type='text/javascript'>
+			function get(){
+				var Osport = document.getElementById("sport");
+				var sOutput = " ";
+				var Ocontent= document.getElementById("content");
+				for(i in Osport){
+				sOutput +=(i+":"+Osport[i]+"<br>"); }
+				Ocontent.innerHTML = sOutput;
+			};
+
+
+			console.log('line 1');
+			</script>
+		</head>
+		<body>
+			<p>Customer Manager</p>
+			<form>
+				<label for="sport">Object</label>
+				<select name="sport" id="sport" size="1">
+					<option value"basebal">baseball</option>
+					<option value"hockey">hockey</option>
+				</select>
+				<button type="button" onclick="get()">submit</button>
+				<br>
+			</form>
+		<div id="content">
+	
+		</div>
+
+
+		</body>
+	</html>
