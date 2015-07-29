@@ -1,0 +1,12 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sapui5_xml.Category" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title" >
+		<content>
+			<List id="listC" mode="SingleSelect" select="CatSelect" items="{data1>/Categories}">
+				<items>
+					<DisplayListItem label="{data1>CategoryName}" value="{data1>CategoryID}"/>
+				</items>				
+			</List>
+		</content>
+	</Page>
+</core:View>
