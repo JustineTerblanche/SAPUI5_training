@@ -1,0 +1,20 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sapui5_xml.Product" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Products" showNavButton="true" navButtonTap="navback">
+		<content>
+			<Table id="tableP">
+				<columns>
+					<Column>
+						<Label text="Product Id"/>
+					</Column>
+					<Column>
+						<Label text="Product name"/>
+					</Column>
+					<Column>
+						<Label text="Units in stock"/>
+					</Column>
+				</columns>
+			</Table>
+		</content>
+	</Page>
+</core:View>
