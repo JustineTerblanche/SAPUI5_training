@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset=”UTF-8”>
+			<title>Customer Manager</title>
+			<script src="script1.js" type="text/javascript"></script>
+		</head>
+		<body onload="loaded()">
+		<button type="button" onclick="button1()">
+		button1
+		</button>
+
+		</body>
+	</html>
+
